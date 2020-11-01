@@ -18,7 +18,7 @@ public aspect traza {
 		System.out.println("Se Actualizó exitosamente el cliente: "+cliente);
 	}
 	
-	//Identifica el evento de elimina cliente y ejecuta el log
+	//Identifica el evento de elimina cliente y ejecuta el log 
 	before(Cliente cliente):
 		call(void ControllerCliente.eliminar(Cliente)) && args(cliente){
 		System.out.println("Se eliminó exitosamente el cliente: "+cliente);
